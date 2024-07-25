@@ -34,9 +34,9 @@ private void usingIfElse(final int i) {
 }
 ```
 
-### The Switch Case Quest: Utilizing Java Modern Switch Expressions/ Pattern matching
+### The Switch Case Quest: Utilizing Java Modern Switch Expressions
 
-This approach leverages Java's modern switch expressions, introduced in Java 14. It demonstrates a more concise syntax and pattern matching capabilities, showcasing how language evolution can lead to cleaner code.
+This approach leverages Java's modern switch expressions, introduced in Java 14 and refined in subsequent versions. It demonstrates a more concise syntax and pattern matching capabilities, showcasing how language evolution can lead to cleaner code.
 
 ```java
 private void usingSwitchCase(final Integer i) {
@@ -49,11 +49,11 @@ private void usingSwitchCase(final Integer i) {
     }
 ```
 
-This approach gives something to ponder about it includes 2 new features introduced Java 14+
-Pattern Matching: case Integer j checks if i can be cast to an Integer (which it always will be in this context since i is already an Integer).
-Guards: The when clause adds an additional condition to be met for that particular case to execute.
+This approach includes two new features introduced Java 14+:
+- Pattern Matching: case Integer j checks if i can be cast to an Integer.
+- Guards: The when clause adds an additional condition to be met for that particular case to execute.
 
-### The Strategy Epiphany
+### The Strategy Epiphany: Implementing the Strategy Design Pattern
 
 This implementation is the most sophisticated, employing the Strategy design pattern. It demonstrates:
 
@@ -68,6 +68,7 @@ The Strategy pattern allows us to define a family of algorithms, encapsulate eac
 ##### The Strategy Interface
 
 This interface defines the contract for our strategies, including a priority method for sorting.
+
 ```java
 interface FizzBuzzStrategy extends Comparable<FizzBuzzStrategy> {
         boolean appliesTo(Integer i);
@@ -85,7 +86,7 @@ interface FizzBuzzStrategy extends Comparable<FizzBuzzStrategy> {
 We have three concrete implementations: FizzBuzz, Fizz, and Buzz. Each defines its own logic for when it applies and what output to produce.
 1. `FizzBuzz` implementation
 ```java
-class Buzz implements FizzBuzzStrategy {
+class FizzBuzz implements FizzBuzzStrategy {
         @Override
         public boolean appliesTo(final Integer i) {
             return i % 5 == 0;
@@ -98,7 +99,7 @@ class Buzz implements FizzBuzzStrategy {
 
         @Override
         public int priority() {
-            return 3;
+            return 1;
         }
     }
 ```
@@ -172,4 +173,6 @@ By compariing this 3 approaches, we can learn about the importance of:
 - Using the right tools for the job
 - Making our code flexible and adaptable
 
-The FizzBuzz problem may seem simple, but it can teach us valuable lessons about programming and problem-solving. By exploring different approaches, we can become better coders and develop a deeper understanding of software development principles.
+## Conclusion 
+
+Each approach to solving the FizzBuzz problem has its own merits. The classic if-else method is straightforward and easy to understand, the modern switch expressions offer a cleaner and more concise syntax, and the Strategy pattern provides a flexible and extensible solution. By understanding and utilizing these different techniques, developers can improve their coding skills and write more robust and maintainable code.
