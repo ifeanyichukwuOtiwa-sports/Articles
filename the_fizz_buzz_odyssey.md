@@ -173,6 +173,10 @@ By compariing this 3 approaches, we can learn about the importance of:
 - Using the right tools for the job
 - Making our code flexible and adaptable
 
+The FizzBuzz problem may seem simple, but it can teach us valuable lessons about programming and problem-solving. By exploring different approaches, we can become better coders and develop a deeper understanding of software development principles.
+
 ## Conclusion 
 
 Each approach to solving the FizzBuzz problem has its own merits. The classic if-else method is straightforward and easy to understand, the modern switch expressions offer a cleaner and more concise syntax, and the Strategy pattern provides a flexible and extensible solution. By understanding and utilizing these different techniques, developers can improve their coding skills and write more robust and maintainable code.
+
+You can find the [Link to code](https://github.com/ifeanyichukwuOtiwa-sports/the-fizz-buzz-odyssey)
