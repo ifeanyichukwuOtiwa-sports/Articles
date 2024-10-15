@@ -71,14 +71,14 @@ This interface defines the contract for our strategies, including a priority met
 
 ```java
 interface FizzBuzzStrategy extends Comparable<FizzBuzzStrategy> {
-        boolean appliesTo(Integer i);
-        String output();
-        int priority();
+    boolean appliesTo(Integer i);
+    String output();
+    int priority();
 
-        default int compareTo(FizzBuzzStrategy o) {
-            return Integer.compare(this.priority(), o.priority());
-        }
+    default int compareTo(FizzBuzzStrategy o) {
+        return Integer.compare(this.priority(), o.priority());
     }
+}
 ```
 
 ##### Concrete Strategies (Implementation)
@@ -89,12 +89,12 @@ We have three concrete implementations: FizzBuzz, Fizz, and Buzz. Each defines i
 class FizzBuzz implements FizzBuzzStrategy {
         @Override
         public boolean appliesTo(final Integer i) {
-            return i % 5 == 0;
+            return i % 5 == 0 && i % 3 == 0;
         }
 
         @Override
         public String output() {
-            return "Buzz";
+            return "FizzBuzz";
         }
 
         @Override
